@@ -77,7 +77,7 @@ header a:hover {
     color: white;
     background-image: linear-gradient;
     background: url(../media/img-1.jpg);
-    animation: banner 20s infinite linear;
+    animation: banner 25s infinite linear;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
@@ -88,20 +88,20 @@ header a:hover {
 }
 
 @keyframes banner{
-    33%{
+    30%{
         background: url(/media/img-2.jpg);
     }
-    66%{
+    60%{
         background: url(/media/img-3.jpeg);
     }
-    100%{
+    90%{
         background: url(/media/img-1.jpg);
     }
 }
 
-#somos-prox{
+/*#somos-prox{
 
-}
+}*/
 
 #somos-prox.container{
     text-align: center;
