@@ -76,7 +76,7 @@ header a:hover {
     height: 90vh;
     color: white;
     background-image: linear-gradient;
-    background: url(../media/img-1.jpg);
+    background: url(/img/index-01.jpg);
     animation: banner 25s infinite linear;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,13 +89,13 @@ header a:hover {
 
 @keyframes banner{
     30%{
-        background: url(/media/img-2.jpg);
+        background: url(/img/index-02.jpg);
     }
     60%{
-        background: url(/media/img-3.jpeg);
+        background: url(/img/index-03.jpeg);
     }
     90%{
-        background: url(/media/img-1.jpg);
+        background: url(/img/index-01.jpg);
     }
 }
 
@@ -141,7 +141,7 @@ header a:hover {
         position:inherit;
         width: 100%;
     }
-    
+
     header .container{
         flex-direction: row;
         justify-content: space-between;
