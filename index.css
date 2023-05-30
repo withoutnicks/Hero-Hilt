@@ -1,0 +1,155 @@
+*{
+    box-sizing: border-box;
+}
+
+h1{font-size: 3.5em;}
+h2{font-size: 2.7em;}
+h3{font-size: 2em;}
+p{font-size: 1.25em;}
+ul{list-style: none;}
+
+body{
+    font-family: "roboto",sans-serif;
+    margin: 0;
+}
+
+button{
+    font-size: 2em;
+    font-weight: bold;
+    padding: 10px 30px;
+    border-radius: 15px;
+    border: 1px solid rgba(0,0,0,0.5);
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+    color: white;
+    background-color: dodgerblue;
+}
+
+button:hover{
+    background-color:deepskyblue;
+}
+
+.container{
+    max-width: 1400px;
+    margin: auto;
+}
+
+header{
+    background-color: rgb(245,245,245);
+}
+
+header .logo {
+    margin: 0;
+    padding: 25px 30px;
+    font-weight: bold;
+    color: dodgerblue;
+    font-size: 1.6em;
+}
+
+header .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header nav{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 25px;
+}
+
+header a{
+    padding: 5px 12px;
+    text-decoration: none;
+    font-weight: bold;
+    color: black;
+}
+header a:hover {
+    color: deepskyblue;
+}
+
+#hero{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 90vh;
+    color: white;
+    background-image: linear-gradient;
+    background: url(../media/img-1.jpg);
+    animation: banner 20s infinite linear;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#hero h1{
+    color: white;
+}
+
+@keyframes banner{
+    33%{
+        background: url(/media/img-2.jpg);
+    }
+    66%{
+        background: url(/media/img-3.jpeg);
+    }
+    100%{
+        background: url(/media/img-1.jpg);
+    }
+}
+
+#somos-prox{
+
+}
+
+#somos-prox.container{
+    text-align: center;
+    padding: 200px 12px;
+}
+
+#nuestros-cursos{
+    background-color: rgb(30,30,30);
+    color: white;
+    text-align: center;
+
+}
+
+#nuestros-cursos .container{
+    padding: 100px 0px;
+}
+
+#nuestros-cursos h2{
+    margin-top: 0;
+}
+
+#nuestros-cursos p{
+    display: none;
+}
+
+#caracteristicas .container{
+    text-align: center;
+    padding: 200px 12 px;
+}
+#caracteristicas li{
+    margin: 16px 0 px;
+    font-weight: bold;
+}
+
+@media (min-width: 720px){
+    header{
+        position:inherit;
+        width: 100%;
+    }
+    
+    header .container{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header nav{
+        flex-direction: row;
+        padding-bottom: 0;
+        padding-right: 20px;
+    }
+}
