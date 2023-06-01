@@ -76,7 +76,7 @@ header a:hover {
     height: 90vh;
     color: white;
     background-image: linear-gradient;
-    background: url(/img/index-01.jpg);
+    background: url(../img/index-01.jpg);
     animation: banner 25s infinite linear;
     background-repeat: no-repeat;
     background-size: cover;
@@ -89,13 +89,13 @@ header a:hover {
 
 @keyframes banner{
     30%{
-        background: url(/img/index-02.jpg);
+        background: url(../img/index-02.jpg);
     }
     60%{
-        background: url(/img/index-03.jpeg);
+        background: url(../img/index-03.jpeg);
     }
     90%{
-        background: url(/img/index-01.jpg);
+        background: url(../img/index-01.jpg);
     }
 }
 
