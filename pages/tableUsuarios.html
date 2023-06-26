@@ -7,8 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>HeroHilt - Juegos</title>
-    <link rel="icon" href="/Hero-Proyect/img/panda.png">
+    <title>HeroHilt - Usuarios</title>
+    <link rel="icon" href="/img/panda.png">
 
     <!-- Custom fonts for this template-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,7 +18,7 @@
         rel="stylesheet">
 
     <!-- Import Bootstrap -->
-    <link rel="stylesheet" href="/Hero-Proyect/css/sb-admin-2.min.css">
+    <link rel="stylesheet" href="/css/sb-admin-2.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
 
     <!-- Estilos unicos -->
@@ -41,7 +41,7 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon">
-                    <img src="/Hero-Proyect/img/two-icon.png" width="30px" height="30px">
+                    <img src="/img/two-icon.png" width="30px" height="30px">
                 </div>
                 <div class="sidebar-brand-text mx-3">Hero Hilt's</div>
             </a>
@@ -51,7 +51,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item">
-                <a class="nav-link" href="/Hero-Proyect/dashboard.html">
+                <a class="nav-link" href="/dashboard.html">
                     <i class="uil uil-dashboard" style="font-size: 1rem;"></i>
                     <span>Home</span></a>
             </li>
@@ -66,7 +66,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="#tablaJuegos">
+                <a class="nav-link" href="/pages/tableJuegos.html">
                     <i class="uil uil-table" style="font-size: 1rem;"></i>
                     <span>Juegos</span>
                 </a>
@@ -74,7 +74,7 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/Hero-Proyect/tableUsuarios.html">
+                <a class="nav-link" href="#tablaUsuarios">
                     <i class="uil uil-user-circle" style="font-size: 1rem;"></i>
                     <span>Usuarios</span>
                 </a>
@@ -90,7 +90,7 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link" href="/Hero-Proyect/vacio.html">
+                <a class="nav-link" href="/pages/vacio.html">
                     <i class="uil uil-shopping-bag" style="font-size: 1rem;"></i>
                     <span>Compras</span>
                 </a>
@@ -98,14 +98,14 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="/Hero-Proyect/vacio.html">
+                <a class="nav-link" href="/pages/vacio.html">
                     <i class="uil uil-ticket" style="font-size: 1rem;"></i>
                     <span>Tickets</span></a>
             </li>
 
             <!-- Nav Item - Tables -->
             <li class="nav-item">
-                <a class="nav-link" href="/Hero-Proyect/vacio.html">
+                <a class="nav-link" href="/pages/vacio.html">
                     <i class="uil uil-history" style="font-size: 1rem;"></i>
                     <span>Dev-Log</span></a>
             </li>
@@ -115,7 +115,7 @@
 
             <!-- Sidebar Message -->
             <div class="sidebar-card d-none d-lg-flex">
-                <img class="sidebar-card-illustration mb-2" src="img//panda.png" alt="...">
+                <img class="sidebar-card-illustration mb-2" src="/img/panda.png" alt="...">
                 <p class="text-center mb-2"><strong>HeroHilt - Admin</strong> <br>tu lugar ideal de trabajo!</p>
             </div>
 
@@ -189,7 +189,7 @@
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-100 small">Administrador</span>
-                                <img class="img-profile rounded-circle" src="img/hola.jpg">
+                                <img class="img-profile rounded-circle" src="/img/hola.jpg">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -220,172 +220,81 @@
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Lista de Juegos</h6>
+                            <h6 class="m-0 font-weight-bold text-success">Lista de Usuarios</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Nombre</th>
-                                            <th>Descripcion</th>
-                                            <th>Categoria</th>
-                                            <th>Stock</th>
-                                            <th>Precio</th>
+                                            <th>Username</th>
+                                            <th>Pais</th>
+                                            <th>Email</th>
+                                            <th>Contrasena</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Nombre</th>
-                                            <th>Descripcion</th>
-                                            <th>Categoria</th>
-                                            <th>Stock</th>
-                                            <th>Precio</th>
+                                            <th>Username</th>
+                                            <th>Pais</th>
+                                            <th>Email</th>
+                                            <th>Contrasena</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>$320,800</td>
+                                            <td>Slade Whitley</td>
+                                            <td>Peru</td>
+                                            <td>pede.nunc.sed@icloud.edu</td>
+                                            <td>BMI89CKE4IH</td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-
-                                            <td>$170,750</td>
+                                            <td>Iona Thornton</td>
+                                            <td>India</td>
+                                            <td>placerat@aol.ca</td>
+                                            <td>JWN96RNJ1OR</td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-
-                                            <td>$86,000</td>
+                                            <td>Astra Cote</td>
+                                            <td>Philippines</td>
+                                            <td>fermentum.risus@outlook.org</td>
+                                            <td>KOL62UUK4FZ</td>
                                         </tr>
                                         <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>22</td>
-
-                                            <td>$433,060</td>
+                                            <td>Rhona Robertson</td>
+                                            <td>Spain</td>
+                                            <td>laoreet.ipsum@outlook.couk</td>
+                                            <td>NWQ31AUN2PV</td>
                                         </tr>
                                         <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>33</td>
-
-                                            <td>$162,700</td>
+                                            <td>Noble Mayer</td>
+                                            <td>Spain</td>
+                                            <td>dolor.nulla@hotmail.ca</td>
+                                            <td>JRB02YPU2UX</td>
                                         </tr>
                                         <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>New York</td>
-                                            <td>61</td>
-
-                                            <td>$372,000</td>
+                                            <td>Moses Higgins</td>
+                                            <td>Spain</td>
+                                            <td>mattis.ornare@protonmail.org</td>
+                                            <td>SGK12YTZ6KI</td>
                                         </tr>
                                         <tr>
-                                            <td>Herrod Chandler</td>
-                                            <td>Sales Assistant</td>
-                                            <td>San Francisco</td>
-                                            <td>59</td>
-
-                                            <td>$137,500</td>
+                                            <td>Naida Marsh</td>
+                                            <td>Peru</td>
+                                            <td>risus@outlook.com</td>
+                                            <td>VPU83STD2TK</td>
                                         </tr>
                                         <tr>
-                                            <td>Rhona Davidson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>Tokyo</td>
-                                            <td>55</td>
-
-                                            <td>$327,900</td>
+                                            <td>Stuart Bartlett</td>
+                                            <td>Peru</td>
+                                            <td>at.nisi@yahoo.couk</td>
+                                            <td>PEO84BAJ6XM</td>
                                         </tr>
                                         <tr>
-                                            <td>Colleen Hurst</td>
-                                            <td>Javascript Developer</td>
-                                            <td>San Francisco</td>
-                                            <td>39</td>
-
-                                            <td>$205,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Sonya Frost</td>
-                                            <td>Software Engineer</td>
-                                            <td>Edinburgh</td>
-                                            <td>23</td>
-
-                                            <td>$103,600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jena Gaines</td>
-                                            <td>Office Manager</td>
-                                            <td>London</td>
-                                            <td>30</td>
-
-                                            <td>$90,560</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Quinn Flynn</td>
-                                            <td>Support Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td>22</td>
-
-                                            <td>$342,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Charde Marshall</td>
-                                            <td>Regional Director</td>
-                                            <td>San Francisco</td>
-                                            <td>36</td>
-
-                                            <td>$470,600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Haley Kennedy</td>
-                                            <td>Senior Marketing Designer</td>
-                                            <td>London</td>
-                                            <td>43</td>
-
-                                            <td>$313,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tatyana Fitzpatrick</td>
-                                            <td>Regional Director</td>
-                                            <td>London</td>
-                                            <td>19</td>
-
-                                            <td>$385,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Michael Silva</td>
-                                            <td>Marketing Designer</td>
-                                            <td>London</td>
-                                            <td>66</td>
-
-                                            <td>$198,500</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Paul Byrd</td>
-                                            <td>Chief Financial Officer (CFO)</td>
-                                            <td>New York</td>
-                                            <td>64</td>
-
-                                            <td>$725,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
-                                            <td>59</td>
-
-                                            <td>$237,500</td>
+                                            <td>Nicholas Haynes</td>
+                                            <td>Peru</td>
+                                            <td>gravida.non@hotmail.com</td>
+                                            <td>KGW42YZA1CU</td>
                                         </tr>
 
                                     </tbody>
@@ -403,9 +312,9 @@
     </div>
 
     <!-- Custom scripts for all pages-->
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.bundle.js"></script>
-    <script src="js/sb-admin-2.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/bootstrap.bundle.js"></script>
+    <script src="/js/sb-admin-2.min.js"></script>
 
 </body>
 
