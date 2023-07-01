@@ -205,10 +205,8 @@
                     <h1 class="h3 mb-2 text-gray-800">Tablas</h1>
                     <br>
                     <!-- Tabla Juegos -->
-                    <div class="card shadow mb-4">
-                        <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-success">Lista de Juegos</h6>
-                        </div>
+                    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css">
+                        <h6 class="m-0 font-weight-bold text-success">Lista de Juegos</h6>
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -374,6 +372,11 @@
     </div>
 
     <!-- Importando Scripts -->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.min.js"></script>
+    <script>
+        $('#dataTable').DataTable();
+    </script>
     <script src="../js/jquery.min.js"></script>
     <script src="../js/bootstrap.bundle.js"></script>
     <script src="../js/sb-admin-2.min.js"></script>
