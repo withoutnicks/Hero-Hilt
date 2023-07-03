@@ -1,10 +1,3 @@
-/*! owl.carousel2.thumbs - v0.1.8 | (c) 2016 @gijsroge | MIT license | https://github.com/gijsroge/OwlCarousel2-Thumbs */
-/**
- * Thumbs Plugin
- * @version 2.0.0
- * @author Gijs RogÃ©
- * @license The MIT License (MIT)
- */
 (function ($, window, document, undefined) {
     'use strict';
 
