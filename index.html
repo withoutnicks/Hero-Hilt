@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - HeroHilt</title>
+    <link rel="shortcut icon" href="img/panda.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/owl.carousel.css">
+    <link rel="stylesheet" href="css/owl.theme.default.css">
+    <link rel="stylesheet" href="css/style.default.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+
+</head>
+
+<!-- navbar-->
+<header class="header mb-5">
+    <!--
+    *** TOPBAR ***
+    _________________________________________________________
+    -->
+    <div id="top">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 offer mb-3 mb-lg-0"><a href="#" class="btn btn-success btn-sm">💸  Ofertas del dia </a>
+                </div>
+                <div class="col-lg-6 text-center text-lg-right">
+                    <ul class="menu list-inline mb-0">
+                        <li class="list-inline-item"><a href="#" data-toggle="modal"
+                                data-target="#login-modal">Entrar</a></li>
+                        <li class="list-inline-item"><a href="register.html">Registrarse</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div id="login-modal" tabindex="-1" role="dialog" aria-labelledby="Login" aria-hidden="true" class="modal fade">
+            <div class="modal-dialog modal-dialog-centered modal-sm">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title">🤖  Iniciar sesión</h5>
+                  <button type="button" data-dismiss="modal" aria-label="Close" class="close"><span aria-hidden="true" style="color: rgb(10, 10, 10);">x</span></button>
+                </div>
+                <div class="modal-body">
+                  <!-- Login -->
+                  <form action="" autocomplete="off" method="post">
+                    <div class="form-group">
+                      <input id="email-modal" type="text" placeholder="Correo" class="form-control">
+                    </div>
+                    <div class="form-group">
+                      <input id="password-modal" type="password" placeholder="Contraseña" class="form-control">
+                    </div>
+                    <p class="text-center">
+                      <button class="btn" onclick="login(event)" style="background-color: #5e91dd; color: white;"><i class="uil uil-signout"></i> Iniciar</button>
+                    </p>
+                  </form>
+                  <!-- End Login -->
+                  <p class="text-center text-muted">¿Todavía no estás registrado?</p>
+                  <p class="text-center text-muted"><a href="register.html"><strong>Regístrate</strong></a> Únete a la comunidad</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        <!-- *** TOP BAR END ***-->
+
+
+    </div>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container"><a href="index.html" class="navbar-brand home"><img src="img/logo-texto-blanco.png"
+                    alt="Obaju logo" class="d-none d-md-inline-block" style="width: 93px; height: 25px;"><img
+                    src="img/logo-texto-blanco.png" alt="HeroHilt logo" class="d-inline-block d-md-none"
+                    style="width: 65px; height: 15px;"><span class="sr-only"></span></a>
+            <div class="navbar-buttons">
+                <button type="button" data-toggle="collapse" data-target="#navigation"
+                    class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle navigation</span><i
+                        class="uil uil-bars"></i></button>
+                <button type="button" data-toggle="collapse" data-target="#search"
+                    class="btn btn-outline-secondary navbar-toggler"><span class="sr-only">Toggle search</span><i
+                        class="uil uil-search"></i></button>
+                <a href="#" class="btn btn-outline-secondary navbar-toggler"><i
+                        class="uil uil-shopping-cart-alt"></i></a>
+            </div>
+            <div id="navigation" class="collapse navbar-collapse">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item"><a href="#" class="nav-link">Inicio</a></li>
+                    <li class="nav-item dropdown menu-short"><a href="#" data-toggle="dropdown" data-hover="dropdown"
+                            data-delay="200" class="dropdown-toggle nav-link">Categorias<b class="caret"></b></a>
+                        <ul class="dropdown-menu megamenu">
+                            <li>
+                                <div class="row">
+                                    <div class="col-md-6 col-lg-3">
+                                        <ul class="list-unstyled mb-3">
+                                            <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Accion</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Aventura</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Terror</a></li>
+                                            <li class="nav-item"><a href="#" class="nav-link" style="color: black;">Shooter</a></li>
+                                        </ul>
+                                    </div>
+                            </li>
+                        </ul></li>
+                    <li class="nav-item"><a href="#" class="nav-link">Nosotros</a></li>
+                </ul>
+                <div class="navbar-buttons d-flex justify-content-end">
+                    <!-- /.nav-collapse-->
+                    <div id="search-not-mobile" class="navbar-collapse collapse"></div><a data-toggle="collapse"
+                        href="#search" class="btn navbar-btn btn-primary d-none d-lg-inline-block" style="background-color: #5e91dd; border: none; box-shadow: none;"><span
+                            class="sr-only">Toggle search</span><i
+                            class="uil uil-search"></i></a>
+                    <div id="basket-overview" class="navbar-collapse collapse d-none d-lg-block"><a href="basket.html"
+                            class="btn btn-primary navbar-btn" style="background-color: #5e91dd; border: none; box-shadow: none;"><span>Carrito  </span><i
+                            class="uil uil-shopping-cart-alt"></i></a></div>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div id="search" class="collapse">
+        <div class="container">
+            <form role="search" class="ml-auto">
+                <div class="input-group">
+                    <input type="text" placeholder="Search" class="form-control" style="box-shadow: none;">
+                    <div class="input-group-append">
+                        <button type="button" class="btn btn-primary" style="background-color: #5e91dd; border: none; box-shadow: none;"><i
+                            class="uil uil-search"></i></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</header>
+<div id="all">
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="main-slider" class="owl-carousel owl-theme">
+                        <div class="item"><img src="img/index/img-01.png" alt="" class="img-fluid"></div>
+                        <div class="item"><img src="img/index/img-02.png" alt="" class="img-fluid"></div>
+                        <div class="item"><img src="img/index/img-03.png" alt="" class="img-fluid"></div>
+                        <div class="item"><img src="img/index/img-04.jpg" alt="" class="img-fluid"></div>
+                    </div>
+                    <!-- /#main-slider-->
+                </div>
+            </div>
+        </div>
+    <br>
+        <!--
+      *** CAREGORIAS***
+      _________________________________________________________
+      -->
+        <div id="hot">
+            <div class="box py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="mb-0">Acción 💥</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-01.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-01.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-01.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Andro <br> Dunos</a></h3>
+                                <p class="price">
+                                    <del></del>$14.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                            <div class="ribbon sale">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-02.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-02.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-02.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Agressors Dark Of Kombat</a></h3>
+                                <p class="price">
+                                    <del>$28</del>  $20.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                            <div class="ribbon sale">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-03.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Aero<br>Fighters 3</a></h3>
+                                <p class="price">
+                                    <del></del>$30.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-04.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-04.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-04.jpg" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">RASTAN</a></h3>
+                                <p class="price">
+                                    <del></del>$3.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-05.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Clock <br> Tower 3</a></h3>
+                                <p class="price">
+                                    <del></del>$10.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-06.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Art of <br>Fighting</a></h3>
+                                <p class="price">
+                                    <del></del>$13.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-07.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Action <br> Rush</a></h3>
+                                <p class="price">
+                                    <del></del>$1.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/acc-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/acc-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/acc-08.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Far Cry</a></h3>
+                                <p class="price">
+                                    <del></del>$30.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <!-- /.product-slider-->
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /#hot-->
+            <!-- *** HOT END ***-->
+
+            <div class="box py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="mb-0">Aventura 🌎</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-01.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-01.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-01.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Death Stranding</a></h3>
+                                <p class="price">
+                                    <del></del>$45.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                            <div class="ribbon sale">
+                                <div class="theribbon">NEW</div>
+                                <div class="ribbon-background"></div>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-02.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-02.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-02.jpg" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">GTA: <br>San Andreas</a></h3>
+                                <p class="price">
+                                    <del></del>$20.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-03.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Red Dead Redemption 2</a></h3>
+                                <p class="price">
+                                    <del></del>$70.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-04.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-04.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-04.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">RAFT</a></h3>
+                                <p class="price">
+                                    <del></del>$13.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-05.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">MINECRAFT</a></h3>
+                                <p class="price">
+                                    <del></del>$23.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-06.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">God of War <br> 2018</a></h3>
+                                <p class="price">
+                                    <del></del>$50.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-07.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">STRAY</a></h3>
+                                <p class="price">
+                                    <del></del>$20.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/ave-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/ave-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/ave-08.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">TWD: <br> Session 01</a></h3>
+                                <p class="price">
+                                    <del></del>$144.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <!-- /.product-slider-->
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /#hot-->
+            <!-- *** HOT END ***-->
+
+            <div class="box py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="mb-0">Terror 💀</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-01.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-01.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-01.jpg" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Five Nights at Freddy's 4</a></h3>
+                                <p class="price">
+                                    <del></del>$25.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-02.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-02.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-02.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">EMTROPY</a></h3>
+                                <p class="price">
+                                    <del></del>$18.00
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-03.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">SILENCE</a></h3>
+                                <p class="price">
+                                    <del></del>$10.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-04.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-04.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-04.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">DEVOUR</a></h3>
+                                <p class="price">
+                                    <del></del>$110.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-05.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Sister <br> Location</a></h3>
+                                <p class="price">
+                                    <del></del>$55.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-06.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Layers <br>Of Fear</a></h3>
+                                <p class="price">
+                                    <del></del>$43.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-07.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Slender</a></h3>
+                                <p class="price">
+                                    <del></del>$4.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/terr-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/terr-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/terr-08.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">PHASMOFOBIA</a></h3>
+                                <p class="price">
+                                    <del></del>$25.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <!-- /.product-slider-->
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /#hot-->
+            <!-- *** HOT END ***-->
+
+            <div class="box py-4">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h2 class="mb-0">Shooter 💣</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="product-slider owl-carousel owl-theme">
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-01.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-01.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-01.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">DOOM: <br> Eternal</a></h3>
+                                <p class="price">
+                                    <del></del>$33.00
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-02.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-02.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-02.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">PvZ: Garden <br> Warfare</a></h3>
+                                <p class="price">
+                                    <del></del>$12.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-03.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-03.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Call of Duty Ghosts</a></h3>
+                                <p class="price">
+                                    <del></del>$45.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-04.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-04.jpg" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-04.jpg" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">BATTLEFIELD <br> 2042</a></h3>
+                                <p class="price">
+                                    <del></del>$143.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-05.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-05.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Boderlands</a></h3>
+                                <p class="price">
+                                    <del></del>$63.00
+                                </p>
+                            </div>
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-06.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-06.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">L4D2</a></h3>
+                                <p class="price">
+                                    <del></del>$3.00
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-07.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-07.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">RUST</a></h3>
+                                <p class="price">
+                                    <del></del>$33.00
+                                </p>
+                            </div>
+
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <div class="item">
+                        <div class="product">
+                            <div class="flip-container">
+                                <div class="flipper">
+                                    <div class="front"><a href="detail.html"><img src="img/index/shh-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                    <div class="back"><a href="detail.html"><img src="img/index/shh-08.png" alt=""
+                                                class="img-fluid"></a></div>
+                                </div>
+                            </div><a href="detail.html" class="invisible"><img src="img/index/shh-08.png" alt=""
+                                    class="img-fluid"></a>
+                            <div class="text">
+                                <h3><a href="detail.html">Hotline <br> Miami</a></h3>
+                                <p class="price">
+                                    <del></del>$11.00
+                                </p>
+                            </div>
+                            <!-- /.text-->
+                        </div>
+                        <!-- /.product-->
+                    </div>
+                    <!-- /.product-slider-->
+                </div>
+                <!-- /.container-->
+            </div>
+            <!-- /#hot-->
+            <!-- *** HOT END ***-->
+
+        </div>
+
+        <!-- * FOOTER * -->
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 text-light">
+                        <h5 class="mb-3"><strong>CONTACTO</strong></h5>
+                        <ul class="list-unstyled">
+                            <li><strong>987456233</strong></li>
+                            <li style="color: #9b9999;">lun-vie: 8:30hrs. - 19:00 hrs</li>
+                            <hr>
+                            <li><strong>EMAIL</strong></li>
+                            <li style="color: #9b9999;">support@herohilt.com</li>
+                            <hr>
+                        </ul>
+                    </div>
+                    <!-- /.col-lg-3-->
+                    <div class="col-lg-3 col-md-6 text-light">
+                        <h5 class="mb-3"><strong>ENLACES IMPORTANTES</strong></h5>
+                        <ul class="list-unstyled">
+                            <li><a href="">Libro de reclamaciones</a></li>
+                            <li><a href="">Politicas y condiciones de uso</a></li>
+                            <li><a href="">Segerencias</a></li>
+                            <li><a href="">Guias de Padres</a></li>
+                            <li><a href="">Trabaja con nosotros</a></li>
+
+                        </ul>
+                    </div>
+                    <div class="col-lg-3 col-md-6 text-light">
+                        <h5 class="mb-3"><strong>INFORMACION</strong></h5>
+                        <ul class="list-unstyled">
+                            <li><a href="">Nosotros</a></li>
+                            <li><a href="">Socios</a></li>
+                            <li><a href="">¿Como comprar?</a></li>
+                            <li><a href="">Preguntas Frecuentes</a></li>
+                            <li><a href="">Comprobantes electronicos</a></li>
+
+                        </ul>
+                    </div>
+                    <!-- /.col-lg-3-->
+                    <div class="col-lg-3 col-md-6 text-light">
+                        <h5 class="mb-3"><strong>CREADO POR HEROHILT</strong></h5>
+                        <ul class="list-unstyled">
+                            <li><a href="">@Takeru~Farz</a></li>
+                            <li><a href="">@sahebath</a></li>
+                            <li><a href="">@aroi</a></li>
+                            <li><a href="">@Akira</a></li>
+                            <li><a href="">@withoutnicks</a></li>
+                        </ul>
+                    </div>
+                    <!-- /.col-lg-3-->
+                </div>
+                <!-- /.row-->
+            </div>
+            <!-- /.container-->
+        </div>
+        <!-- /#footer-->
+        <!-- *** FOOTER END ***-->
+
+
+        <!--
+  *** COPYRIGHT ***
+  _________________________________________________________
+  -->
+        <div id="copyright">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mb-2 mb-lg-0">
+                        <p class="text-center text-lg-left">©2023 Hero-Hilt</p>
+                    </div>
+                    <div class="col-lg-6">
+                        <p class="text-center text-lg-right">Sitio web de venta de videojuegos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- *** COPYRIGHT END ***-->
+        <!-- Login -->
+        <script src="js/script.js"></script>
+        <!-- Extra files-->
+        <script src="js/index/jquery.min.js"></script>
+        <script src="js/bootstrap.bundle.min.js"></script>
+        <script src="js/index/jquery.cookie.js"> </script>
+        <script src="js/index/owl.carousel.min.js"></script>
+        <script src="js/index/owl.carousel2.thumbs.js"></script>
+        <script src="js/front.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        </body>
+
+</html>
