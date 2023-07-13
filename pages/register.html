@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store - HeroHilt</title>
+    <link rel="shortcut icon" href="../img/icon-page.png">
+    <!-- CSS -->
+    <link rel="stylesheet" href="../src/bootstrap/bootstrap-index.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <!-- navar-CSS-Register -->
+<style>
+  .navbar {
+     border-bottom: 5px solid #FFF4DE;
+     background-color: #FFF4DE;
+   }
+
+   .navbar a{
+     border-radius: 10px;
+   }
+
+   body {
+     height: 100%;
+     overflow-x: hidden;
+     background-color: #555555 !important;
+     background-image: url(../img/register-background.jpg);
+   }
+
+   #reg {
+     height: 100%;
+     padding: 4rem;
+     align-items: center;
+   }
+
+   #formulario {
+     padding: 2rem;
+     border-radius: 15px;
+   }
+
+   #formulario h1{
+     text-align: center;
+   }
+
+   #formulario p{
+     text-align: center;
+   }
+</style>
+</head>
+
+<!-- navar  -->
+<nav class="navbar navbar-expand-lg">
+    <div class="container mt-2 mb-0"><a href="index.html" class="navbar-brand home"><img src="../img/logo-negro.png"
+                class="d-none d-md-inline-block" style="width: 100px; height: 25px;"><img
+                src="../img/logo-negro.png" class="d-inline-block d-md-none"
+                style="width: 90px; height: 20px;"><span class="sr-only"></span></a>
+                <!-- /.nav-collapse-->
+                <a href="../index.html" class="btn btn-outline-dark"><i class="uil uil-arrow-left"></i> Go back</a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+ <!-- Register -->
+<div class="col-lg-5 mx-auto" id="reg">
+    <div id="formulario" class="box bg-white">
+      <h1 class="display-4">Create account</h1>
+      <p class="lead">¿Aún no eres de nuestra comunidad?</p>
+      <form action="customer-orders.html" method="post">
+        <div class="form-group">
+          <label for="user">Username</label>
+          <input type="text" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" class="form-control">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone number</label>
+          <input type="number" class="form-control">
+        </div>
+        <div class="text-center">
+          <button type="submit" class="btn btn-outline-success btn-lg">Register <i class="uil uil-arrow-right"></i></button>
+        </div>
+      </form>
+    </div>
+</div>
+
+</html>
